@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-project": {
+    "test-task-list-of-json": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test-project",
+            "outputPath": "dist/test-task-list-of-json",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "test-project:build:production"
+              "browserTarget": "test-task-list-of-json:build:production"
             },
             "development": {
-              "browserTarget": "test-project:build:development"
+              "browserTarget": "test-task-list-of-json:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test-project:build"
+            "browserTarget": "test-task-list-of-json:build"
           }
         },
         "test": {
