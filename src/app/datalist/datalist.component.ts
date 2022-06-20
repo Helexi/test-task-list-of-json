@@ -21,15 +21,10 @@ export class DataListComponent implements OnInit {
   getCurrentUser(itemDatalist: Datalist): void {
     this.toogleShowMe();
     this.selectedItem = itemDatalist;
-    console.log(this.datalists)
   }
 
   toogleShowMe() {
     this.showMe = true;
-  }
-
-  consoleLogShow(el: any) {
-    console.log(el.target);
   }
 
   toogleHideMe() {
