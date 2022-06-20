@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data-service.service';
 import { Datalist } from '../types/type';
-import datalistFile from '../datalist.json';
 
 @Component({
   selector: 'app-datalist',
@@ -11,25 +10,26 @@ import datalistFile from '../datalist.json';
 export class DataListComponent implements OnInit {
   showMe: boolean = false;
   hideMe: boolean = true;
-  datalists: Datalist[] = datalistFile;
+  datalists: Datalist[] = this.DataService.datalists;
   selectedItem: Datalist = <Datalist>{};
 
-  // public users: Array<any>;
-  public dataList: any;
-
-  constructor(private DataService: DataService) {
-    // this.users = DataService.getUsers();
+  constructor(public DataService: DataService) {
   }
 
   ngOnInit(): void { }
 
-  getCurrentUser(datalist: Datalist): void {
+  getCurrentUser(itemDatalist: Datalist): void {
     this.toogleShowMe();
-    this.selectedItem = datalist;
+    this.selectedItem = itemDatalist;
+    console.log(this.datalists)
   }
 
   toogleShowMe() {
     this.showMe = true;
+  }
+
+  consoleLogShow(el: any) {
+    console.log(el.target);
   }
 
   toogleHideMe() {

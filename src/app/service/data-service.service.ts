@@ -11,12 +11,4 @@ export class DataService {
   selectedItem: Datalist = <Datalist>{};
 
   constructor() { }
-
-  // public getUsers(): Array<any>{
-  //  return [
-  //   {firstName: 'Ivan', LastName: 'Ivanov'},
-  //   {firstName: 'Ivan1', LastName: 'Ivano1'},
-  //   {firstName: 'Ivan2', LastName: 'Ivanov2'},
-  //  ]
-  // }
 }

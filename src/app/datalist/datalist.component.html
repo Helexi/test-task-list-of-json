@@ -1,11 +1,12 @@
 <div class="App__sidebar">
   <ul class="listDescriptions">
-    <li *ngFor="let datalist of datalists" class="listDescriptions__item">
+    <li *ngFor="let itemDatalist of datalists" class="listDescriptions__item">
       <p class="listDescriptions__p">
         Would you like to see more information? Press the button!
       </p>
-      <button class="btn btn-primary" (click)="getCurrentUser(datalist)">
-        Uesr# {{ datalist.ProductId }}
+      <button class="btn btn-primary" (click)="getCurrentUser(itemDatalist)"
+      (click)="consoleLogShow($event)">
+        Uesr# {{ itemDatalist.ProductId }}
       </button>
     </li>
   </ul>
@@ -28,9 +29,3 @@
     </div>
   </div>
 </div>
-
-<!-- <ul>
-  <li *ngFor="let user of users">
-    {{ user.firstName }} {{ user.LastName }}
-  </li>
-</ul> -->
